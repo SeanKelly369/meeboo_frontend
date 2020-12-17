@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "meeboo-frontend"
+  "defaultProject": "meeboo-frontend",
+  "cli": {
+    "analytics": "9034ea25-0f51-4961-81f1-312d4045cb63"
+  }
 }
