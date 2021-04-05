@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
       passwordConfirm: new FormControl('', [Validators.required, Validators.minLength(8)]) // password match
     });
    }
+   
 
   result: any;
 
