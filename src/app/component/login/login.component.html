@@ -1,5 +1,5 @@
 <div class='signup_wrapper'>
-    <form [formGroup]='loginForm' (ngSubmit)='onClickSubmit()'> 
+    <form [formGroup]='signupForm' (ngSubmit)='onClickSubmit()'> 
         <div id='signUp'>Sign Up</div>
         <div class='inputsWrapper'>
             <div class='inputs'>
@@ -81,7 +81,7 @@
                 <input type='checkbox'>I accept the Terms of Use and Privacy Policy
             </div>
             <div class='signUpContainer'>
-                <button class='signUpButton'>Sign Up</button>
+                <button [disabled]="!signupForm.valid" class='signUpButton'>Sign Up</button>
             </div>
         </div>
      </form>

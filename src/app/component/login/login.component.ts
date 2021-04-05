@@ -7,17 +7,17 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 })
 export class LoginComponent implements OnInit {
 
-  loginForm: FormGroup;
+  signupForm: FormGroup;
 
 
 
   constructor(private formBuilder: FormBuilder) {
-    this.loginForm = this.formBuilder.group({
+    this.signupForm = this.formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       email: ['', Validators.required],
-      password: ['', Validators.required],
-      passwordConfirm: ['', Validators.required]
+      password: new FormControl('', [Validators.required, Validators.minLength(8)]),
+      passwordConfirm: new FormControl('', [Validators.required, Validators.minLength(8)]) // password match
     });
    }
 
