@@ -7,5 +7,4 @@ export class UserService {
 
   constructor() { }
 
-  
 }
