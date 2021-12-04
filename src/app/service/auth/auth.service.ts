@@ -5,6 +5,7 @@ import { map } from 'lodash';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { JwtHelperService } from '../jwtHelper/jwt-helper.service';
 import * as moment from 'moment';
+import { User } from '../../model/user';
 
 const AUTH_USER = 'auth-user';
 const AUTH_API = 'https://www.meeboo.org:9000/api/auth';
@@ -18,6 +19,7 @@ const httpOptions = {
 export class AuthService {
 
   private token: string = '';
+  private loggedInUsername: string;
   private jwtHelper = new JwtHelperService;
 
   private subject = new BehaviorSubject<User>(null);
@@ -97,8 +99,7 @@ export class AuthService {
   }
 
   getExpiration() {
-    let expiration = '';
-    expiration = sessionStorage.getItem('auth-user');
+    let expiration = sessionStorage.getItem('auth-user');
     for(let [key, value] of Object.entries(expiration)) {
       if(key === 'expirationDat;e') {
         return value;

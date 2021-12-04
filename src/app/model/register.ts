@@ -1,5 +1,5 @@
 export class Register {
-    firstName:string;
-    lastname:string;
+    firstName!:string;
+    lastname!:string;
 
 }
