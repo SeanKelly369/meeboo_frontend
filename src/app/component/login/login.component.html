@@ -1,0 +1,88 @@
+<div class='signup_wrapper'>
+    <form [formGroup]='signupForm' (ngSubmit)='onClickSubmit()'> 
+        <div id='signUp'>Sign Up</div>
+        <div class='inputsWrapper'>
+            <div class='inputs'>
+                <div>
+                    <div>
+                        First Name
+                    </div>
+                    <div >
+                        <input class='name_input' type='text' name="firstName" 
+                        placeholder="First name"
+                        formControlName='firstName'> 
+                    </div>
+
+                </div>
+
+                <div>
+                    <span>
+                        <span>
+                            Last Name
+                        </span>
+                        <input class='name_input' type='text' name="lastName" 
+                        placeholder="Last name"
+                        formControlName='lastName'> 
+                    </span>
+                </div>
+            </div>
+
+            <div>
+                <div class='inputs'>
+                    <span>
+                        Email
+                    </span>
+                </div>
+            </div>
+            <div>
+    
+                <input class='wide_input' type = "email" 
+                name = "email" 
+                placeholder = "Email"
+                formControlName='email'>
+    
+            </div>
+            
+            <div>
+                <div class='inputs'>
+                    <span>
+                        Password
+                    </span>
+                </div>
+                <div>
+                    <input class='wide_input' type='password'
+                    placeholder='password'
+                    name='password'
+                    formControlName='password'> 
+                </div>
+    
+                <div>
+                    <div class='inputs'>
+                        <span>
+                            Confirm Password
+                        </span>
+                    </div>
+                    <div>
+                        <input class='wide_input' type='password'
+                        placeholder='confirm password'
+                        name='confirm password'
+                        formControlName='passwordConfirm'> 
+                    </div>
+                </div>
+            </div>
+    
+            <div class='checks'>
+                <input type='checkbox'>
+                <span class='show_password'>
+                    Show password
+                </span>
+            </div>
+            <div class='terms'>
+                <input type='checkbox'>I accept the Terms of Use and Privacy Policy
+            </div>
+            <div class='signUpContainer'>
+                <button [disabled]="!signupForm.valid" class='signUpButton'>Sign Up</button>
+            </div>
+        </div>
+     </form>
+</div>
